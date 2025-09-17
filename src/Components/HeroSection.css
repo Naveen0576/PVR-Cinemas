@@ -18,7 +18,7 @@
     align-items: center;
 }
 .pvr-logo{
-    width: 6%;
+    width: 8%;
 }
 .HeroSection-Heading{
     display: flex;
@@ -27,14 +27,14 @@
 .secondaryHeading{
   font-family: 'Gruppo', sans-serif;
   font-weight: 400;
-  font-style: normal;
+  color: #d7d6d2;
 }
 .primaryHeading{
   font-family: 'Bolin Gerii', serif;
   font-weight: 400;
   font-style: normal;
-  color: #FECB05;
-  font-size: 80px;
+  color: var(--primary-color);
+  font-size: 96px;
 }
 .primary-underline{
   width: 18%;

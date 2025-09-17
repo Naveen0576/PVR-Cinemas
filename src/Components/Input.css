@@ -1,0 +1,36 @@
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 4px;
+}
+.inputField {
+    height: 32px;
+    width: 16%;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-image: linear-gradient(var(--background),var(--background)), 
+                      linear-gradient(117.23deg, rgba(254, 203, 5, 0.5) 0.77%, #292929 33.59%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 4px 8px;
+    outline: none;
+}
+
+.search-button{
+    height: 32px;
+    background-color: var(--primary-color);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 56%;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+}
+.search-icon{
+    background-color: var(--primary-color);
+    width: 32%;
+}
