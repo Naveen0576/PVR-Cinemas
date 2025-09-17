@@ -16,6 +16,7 @@
     background-clip: padding-box, border-box;
     padding: 4px 8px;
     outline: none;
+    color: rgb(145, 141, 141);
 }
 
 .search-button{
