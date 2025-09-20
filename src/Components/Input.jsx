@@ -3,21 +3,21 @@ import "../Components/Input.css";
 import searchIcon from "../assets/InputSection/Search-Icon.svg";
 
 function Input({ onSearch }) {
-  const [query, setQuery] = useState("");
+  const [inputValue, setInputVaue] = useState("");
 
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    setInputVaue(e.target.value);
   };
 
   const handleSearchClick = () => {
-    if (query.trim()) {
-      onSearch(query);
+    if (inputValue.trim()) {
+      onSearch(inputValue);
     }
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSearchClick(); // call search on Enter
+      handleSearchClick();
     }
   };
 
@@ -27,7 +27,7 @@ function Input({ onSearch }) {
         type="text"
         placeholder="Search Movie.."
         className="inputField"
-        value={query}
+        value={inputValue}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />

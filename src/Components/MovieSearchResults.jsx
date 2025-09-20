@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./MovieSearchResults.css";
 import MovieCard from "../Components/Moviecard";
+import MoviePagination from "./Pagination";   
 import popcornimg from "../assets/MovieSearchResults/Error-Container/Popcorn.png";
 
 function MovieSearchResults({ bool, list }) {
@@ -11,24 +12,46 @@ function MovieSearchResults({ bool, list }) {
     setPage(1);
   }, [list]);
 
+  const totalPages = Math.ceil((list?.length || 0) / itemsPerPage);
+
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = list ? list.slice(startIndex, endIndex) : [];
 
+  const handlePageChange = (event, value) => {
+    setPage(value);
+  };
+
   return (
     <>
       {bool && list && list.length > 0 ? (
-        <div className="MovieGrid">
-          {currentItems.map((movie, i) => (
-            <MovieCard
-              key={movie.imdbID || i}
-              Poster={movie.Poster}
-              Title={movie.Title}
-              Year={movie.Year}
-            />
-            
-          ))}
-        </div>
+        <>
+          <div className="MovieGrid">
+            {/* {currentItems.map((movie, i) => (
+              <MovieCard
+                key={movie.imdbID || i}
+                Poster={movie.Poster}
+                Title={movie.Title}
+                Year={movie.Year}
+              />
+            ))} */}
+            {currentItems.map((movie, i) => (
+              <MovieCard
+                key={`${movie.imdbID}-${page}-${i}`}   // force unique key per page
+                Poster={movie.Poster}
+                Title={movie.Title}
+                Year={movie.Year}
+              />
+            ))}
+          </div>
+
+          {/* Pagination below the grid */}
+          <MoviePagination
+            totalPages={totalPages}
+            page={page}
+            onChange={handlePageChange}
+          />
+        </>
       ) : (
         <div className="error-container">
           <p className="error-message">
