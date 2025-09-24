@@ -29,7 +29,7 @@ function MovieSearchResults({ bool, list }) {
           <div className="MovieGrid">
             {/* {currentItems.map((movie, i) => (
               <MovieCard
-                key={movie.imdbID || i}
+                key={movie.imdbID}
                 Poster={movie.Poster}
                 Title={movie.Title}
                 Year={movie.Year}
@@ -44,13 +44,12 @@ function MovieSearchResults({ bool, list }) {
               />
             ))}
           </div>
-
-          {/* Pagination below the grid */}
           <MoviePagination
-            totalPages={totalPages}
-            page={page}
-            onChange={handlePageChange}
-          />
+                totalPages={totalPages}
+                page={page}
+                onChange={handlePageChange}
+              />
+
         </>
       ) : (
         <div className="error-container">
