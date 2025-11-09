@@ -33,3 +33,53 @@
 
 
 }
+
+/* HeroSection responsive overrides */
+
+@media (max-width: 420px) {
+  .HeroSection {
+    gap: 8px;
+    padding: 20px 12px;
+  }
+  .pvr-logo {
+    width: 22% !important;
+  }
+  .primaryHeading {
+    font-size: 36px !important;
+    line-height: 1;
+  }
+  .secondaryHeading {
+    font-size: 14px !important;
+  }
+  .primary-underline {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .pvr-logo {
+    width: 14% !important;
+  }
+  .primaryHeading {
+    font-size: 56px !important;
+  }
+  .secondaryHeading {
+    font-size: 16px !important;
+  }
+  .primary-underline {
+    width: 32% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pvr-logo {
+    width: 10% !important;
+  }
+  .primaryHeading {
+    font-size: 72px !important;
+  }
+  .primary-underline {
+    width: 20% !important;
+  }
+}
+

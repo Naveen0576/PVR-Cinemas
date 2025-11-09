@@ -21,3 +21,23 @@
   --primary-color: #FECB05;
 
 }
+
+/* Small global tweaks for spacing/typography on small devices */
+
+@media (max-width: 420px) {
+  :root {
+    /* Keep colors unchanged; only scale down base font-size slightly for tight screens */
+    font-size: 14px;
+  }
+
+  body, * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  :root {
+    font-size: 15px;
+  }
+}

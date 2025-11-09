@@ -8,3 +8,56 @@
 .circular-gallery:active {
   cursor: grabbing;
 }
+
+/* CircularGallery responsive overrides */
+
+@media (max-width: 420px) {
+  .circular-gallery {
+    height: 45vh !important;
+    min-height: 240px !important;
+    max-height: 55vh !important;
+  }
+
+  /* make the WebGL canvas fit the container */
+  .circular-gallery canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .circular-gallery {
+    height: 50vh !important;
+    min-height: 300px !important;
+    max-height: 60vh !important;
+  }
+
+  .circular-gallery canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .circular-gallery {
+    height: 420px !important;
+    max-height: 70vh !important;
+  }
+
+  .circular-gallery canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+}
+
+/* Desktop keeps original behaviour but ensure canvas scales on high DPR screens */
+@media (min-width: 1025px) {
+  .circular-gallery canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+}

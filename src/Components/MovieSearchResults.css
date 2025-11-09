@@ -21,3 +21,45 @@
 .E404{
     color: var(--primary-color);
 }
+
+/* MovieSearchResults responsive overrides */
+
+@media (max-width: 420px) {
+  .MovieGrid {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .error-message {
+    font-size: 20px !important;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .popcorn-img {
+    width: 60% !important;
+    max-width: 240px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .MovieGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    padding: 24px 32px 0 32px !important;
+  }
+
+  .popcorn-img {
+    width: 40% !important;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .MovieGrid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    padding: 32px 48px 0 48px !important;
+  }
+}

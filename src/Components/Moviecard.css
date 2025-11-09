@@ -62,3 +62,55 @@
   padding-bottom: 40px;
 
 }
+
+
+/* MovieCard responsive overrides */
+
+@media (max-width: 420px) {
+  .card {
+    border-radius: 10px;
+  }
+
+  .card img {
+    width: 100% !important;
+    max-height: 320px !important;
+    min-height: auto !important;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .poster.placeholder {
+    width: 70% !important;
+    transform: translateX(15%) !important;
+    padding-bottom: 16px !important;
+  }
+
+  .poster-unavailable {
+    font-size: 14px !important;
+    bottom: 20% !important;
+  }
+
+  .card-data h3 {
+    font-size: 16px !important;
+  }
+
+  .card-data p {
+    font-size: 12px !important;
+    padding: 3px 10px !important;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .card img {
+    max-height: 360px !important;
+    min-height: auto !important;
+  }
+  .poster.placeholder {
+    width: 60% !important;
+    transform: translateX(20%) !important;
+    padding-bottom: 24px !important;
+  }
+  .card-data h3 {
+    font-size: 18px !important;
+  }
+}
