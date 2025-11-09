@@ -1,5 +1,5 @@
 import React from "react";
-import "./MovieCard.css";
+import "../Components/Moviecard.css";
 import placeholder from "../assets/MovieSearchResults/Error-Container/scene-clipper.png";
 
 function MovieCard({ Poster, Title, Year }) {
